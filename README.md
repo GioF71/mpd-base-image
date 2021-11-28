@@ -1,5 +1,4 @@
 # mpd-base-image
-work in progress
 
 ## Reference
 
@@ -14,4 +13,4 @@ Images: [DockerHub](https://hub.docker.com/r/giof71/mpd-base-image)
 
 ## Description
 
-A base image with mpd installed. It is (or will be used) by mpd-alsa-docker and mpd-pulse-docker.
+This is a base image with mpd installed. It is (or will be used) by mpd-alsa-docker and mpd-pulse-docker.
