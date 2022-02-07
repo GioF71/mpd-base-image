@@ -1,7 +1,4 @@
-from ubuntu:focal
+FROM ubuntu:focal-20220113 
 
-RUN apt-get update
-RUN apt-get install mpd -y
-
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install mpd -y && rm -rf /var/lib/apt/lists/*
 
