@@ -19,9 +19,6 @@ do
     esac
 done
 
-#echo "base_image: $base_image";
-#echo "tag: $tag";
-
 if [ -z "${base_image}" ]; then
   base_image=$DEFAULT_BASE_IMAGE
 fi
@@ -34,5 +31,4 @@ echo "Tag: ["$tag"]"
 
 docker build . \
     --build-arg BASE_IMAGE=${expanded_base_image} \
-    --build-arg DOWNLOAD_FROM_SOURCEFORGE=${download} \
     -t giof71/mpd-base-image:$tag
