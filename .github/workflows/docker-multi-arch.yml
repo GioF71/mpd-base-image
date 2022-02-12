@@ -25,14 +25,14 @@ jobs:
                 base="$(cut -d '-' -f1 <<< ${base})"
                 mpd_version=""
                 distro_id=${base}
-                if [ "${base}" = "bullseye" ]; \
-                    then mpd_version="mpd-0.22.6-"; \
+                if [ "${base}" = "bullseye" ]; then \
+                    mpd_version="mpd-0.22.6-"; \
                 fi
-                if [ "${base}" = "buster" ]; \
+                if [ "${base}" = "buster" ]; then \
                     mpd_version="mpd-0.21.5-"; \
                 fi
-                if [ "${base}" = "focal" ]; \
-                    then distro_id="ubuntu-focal"; \
+                if [ "${base}" = "focal" ]; then \
+                    distro_id="ubuntu-focal"; \
                 fi
                 tags="${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}${distro_id}-${date}"
                 if [ "${base}" = "buster" ]; then \
