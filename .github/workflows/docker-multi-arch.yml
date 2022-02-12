@@ -33,7 +33,7 @@ jobs:
                 fi
                 if [ "${base}" = "focal" ]; then \
                     mpd_version="mpd-0.21.20"; \
-                    distro_id="ubuntu-focal"; \
+                    distro_id="ubuntu-focal-"; \
                 fi
                 tags="${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}${distro_id}-${date}"
                 if [ "${base}" = "buster" ]; then \
