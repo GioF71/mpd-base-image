@@ -26,7 +26,6 @@ fi
 expanded_base_image=${base_images[$base_image]}
 
 echo "Base Image: ["$expanded_base_image"]"
-echo "Download from SourceForge: ["$download"]"
 echo "Tag: ["$tag"]"
 
 docker build . \
