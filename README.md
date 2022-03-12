@@ -19,5 +19,6 @@ This is a base image with mpd installed. It is (or will be used) by mpd-alsa-doc
 
 Release Date|Major Changes
 ---|---
+Base Image Bump|Bump to debian buster-20220228-slim, debian bullseye-20220228-slim, ubuntu focal-20220302
 2022-02-26|Run apt-get upgrade during build, automatic sync of README.md towards Docker Hub. Reduce image size.
 2022-02-13|Automated builds thanks to [Der-Henning](https://github.com/Der-Henning/), Builds for amd64 also thanks to [Der-Henning](https://github.com/Der-Henning/), the README.md you are reading now is copied to the image under path `/app/doc/README.md`. Building from debian bullseye, debian buster and ubuntu focal. Created convenience script for local build.

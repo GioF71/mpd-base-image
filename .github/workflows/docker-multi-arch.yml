@@ -11,7 +11,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                base: [ 'debian:bullseye-20220125-slim', 'debian:buster-20220125-slim', 'ubuntu:focal-20220105' ]
+                base: [ 'debian:bullseye-20220228-slim', 'debian:buster-20220228-slim', 'ubuntu:focal-20220302' ]
                 
         steps:
         -
