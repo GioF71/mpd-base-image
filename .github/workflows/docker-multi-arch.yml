@@ -36,11 +36,11 @@ jobs:
                 fi
                 tags="${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}-${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}-${distro_id}-${date}"
                 if [ "${base}" = "buster" ]; then
-                    tag=${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:stable";
+                    tag="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:stable";
                 elif [ "${base}" = "bullseye" ]; then
-                    tags=${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:latest";
+                    tags="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:latest";
                 elif [ "${base}" = "focal" ]; then
-                    tags=${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id}";
+                    tags="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id}";
                 fi
                 echo "RELEASE_TAGS=${tags}" >> $GITHUB_ENV
         -
