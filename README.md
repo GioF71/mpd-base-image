@@ -17,8 +17,8 @@ This is a base image with mpd installed. It is (or will be used) by mpd-alsa-doc
 
 ## Release History
 
-Release Date|Major Changes
----|---
+Release Date|Major Changes|Description
+:---|:---|:---
 2022-04-09|Base Image Bump|Bump to ubuntu focal-20220404
 2022-03-31|Base Image Bump|Bump to debian buster-20220328-slim, debian bullseye-20220328-slim, ubuntu focal-20220316
 2022-03-12|Base Image Bump|Bump to debian buster-20220228-slim, debian bullseye-20220228-slim, ubuntu focal-20220302
