@@ -11,7 +11,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                base: [ 'debian:bullseye-20220328-slim', 'debian:buster-20220328-slim', 'ubuntu:focal-20220404' ]
+                base: [ 'debian:bullseye-20220418-slim', 'debian:buster-20220418-slim', 'ubuntu:jammy-20220428' ]
                 
         steps:
         -
@@ -31,15 +31,15 @@ jobs:
                 if [ "${base}" = "buster" ]; then
                     mpd_version="mpd-0.21.5";
                 fi
-                if [ "${base}" = "focal" ]; then
-                    mpd_version="mpd-0.21.20";
+                if [ "${base}" = "jammy" ]; then
+                    mpd_version="mpd-0.23.5";
                 fi
                 tags="${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}-${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${mpd_version}-${distro_id}-${date}"
                 if [ "${base}" = "buster" ]; then
                     tag="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:stable";
                 elif [ "${base}" = "bullseye" ]; then
                     tags="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id},${{secrets.DOCKER_USERNAME}}/mpd-base-image:latest";
-                elif [ "${base}" = "focal" ]; then
+                elif [ "${base}" = "jammy" ]; then
                     tags="${tags},${{secrets.DOCKER_USERNAME}}/mpd-base-image:${distro_id}";
                 fi
                 echo "RELEASE_TAGS=${tags}" >> $GITHUB_ENV
