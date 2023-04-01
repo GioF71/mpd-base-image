@@ -1,5 +1,9 @@
 # mpd-base-image
 
+## Announcement
+
+This is abandoned. I am not using this repo (and the corresponding docker repo) anymore. It has been surpassed by work in the [mpd-alsa-docker](https://github.com/GioF71/mpd-alsa-docker).
+
 ## Reference
 
 First and foremost, the reference to the awesome project:
